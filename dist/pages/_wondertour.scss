@@ -1,0 +1,334 @@
+//-----------Bannertour-----------//
+.bannertour{
+    
+    &__content1{
+        background-image: url(/dist/img/beach.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 85rem;
+        padding: 30rem 0;
+        color: #e1e1e1;
+        
+        h3{
+            font-weight: 500;
+        }
+        h2{
+            font-weight: 600;
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
+        span{
+            font-weight: bold;
+        }
+        button{
+            padding: 1.5rem 3rem;
+            border-color: #ffffff;
+            background-color: transparent;
+        }
+    }
+    &__content2{
+        background-image: url(/dist/img/beachboat.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 85rem;
+        padding: 30rem 0;
+        color: #e1e1e1;
+        
+        h3{
+            font-weight: 500;
+        }
+        h2{
+            font-weight: 600;
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
+        span{
+            font-weight: bold;
+        }
+        button{
+            padding: 1.5rem 3rem;
+            border-color: #ffffff;
+            background-color: transparent;
+        }
+    }
+    &__content3{
+        background-image: url(/dist/img/2boat.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 85rem;
+        padding: 30rem 0;
+        color: #e1e1e1;
+        
+        h3{
+            font-weight: 500;
+        }
+        h2{
+            font-weight: 600;
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
+        span{
+            font-weight: bold;
+        }
+        button{
+            padding: 1.5rem 3rem;
+            border-color: #ffffff;
+            background-color: transparent;
+        }
+    }
+
+    
+    .container{
+        position: relative;
+        
+    }
+
+    .tns-controls{
+        position: absolute;
+        width: 100%;
+        
+        justify-content: space-between;
+        top: 50%;
+        z-index: 999;
+        font-size: 3rem;
+    }
+
+}
+
+//-----------Holidays-----------//
+.holiday{
+    background-color: #e1e1e1;
+    &__content1{
+        background-image: url(/dist/img/balloon.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 38rem;
+        width: 70%;
+        
+        color: #e1e1e1;
+        text-align: center;
+        margin: auto;
+    }
+
+    &__content2{
+        background-image: url(/dist/img/mountain.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 38rem;
+        width: 70%;
+        
+        color: #e1e1e1;
+        text-align: center;
+        margin: auto;
+    }
+
+    &__content3{
+        background-image: url(/dist/img/beach_holidays.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 38rem;
+        width: 70%;
+        
+        color: #e1e1e1;
+        text-align: center;
+        margin: auto;
+    }
+    @include mediaQuery($break-lg){
+        &__wrapper{
+            justify-content: center;
+            margin: auto;
+        }
+        &__all{
+            display: flex;
+            gap: 3rem;
+            width:80%;
+            
+        }
+    }
+}
+
+
+//-----------Discover-------//
+
+.discover{
+    .container{
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    &__nav{
+            text-align: center;
+            img{
+                width: 95%;
+                height: 31rem;
+            }
+            h3{
+                font-size: 2.5rem;
+                text-align: center;     
+                font-weight: 600;
+                padding: 2rem 0;
+            }
+            ul{
+                display: flex;
+                justify-content: center;
+                max-width: 767.98px;
+                padding: 2rem 0;
+                // margin:0 auto;
+                flex-wrap: wrap;
+                
+                li{
+                    padding: .5rem .5rem;
+                    cursor: pointer;
+                    border-bottom: 1.5px solid #e1e1e1;
+                    border-top: 1.5px solid #e1e1e1;
+                    
+                    
+                    a{
+                        color: #9b9b9b;
+                        font-weight: 400;
+                        font-size: 2rem;
+                        padding-bottom: 2rem;
+                        
+                    }
+                    &.active{
+                        border-bottom: 1.5px solid #01B3A7;
+                        border-top: 1.5px solid #01B3A7;
+                        color: #01B3A7;
+                        a{
+                            color: #01B3A7;
+                        }
+                    }
+                    
+                }   
+            }
+        }
+
+    &__tab{ 
+        
+        padding: 0 3rem;
+        position: relative;         
+        min-height: 50rem;           
+        display: flex;                
+        justify-content: center;  
+        text-align: center;        
+        &__content{
+            // display: none;
+            display: flex;
+            position: absolute;
+            align-items: center;
+            opacity: 0;
+            p{
+                color: #464545;
+            }
+            &__text{  
+                text-align: center;
+                justify-content: center;
+                display: flex;
+                gap: 2rem;
+                padding: 2rem 0;
+                button:first-child{
+                    padding: 2rem 5rem;
+                    background-color: #01B3A7;
+                    border: none;  
+                    
+                    a{
+                        color: #ffffff;
+                        font-size: 1.8rem;
+                    }
+                }
+                
+                button:last-child{
+                    padding: 2rem 5rem;
+                    background-color: #ffffff; 
+                    border-width: 2px;
+                    border-color: black;
+                    a{
+                        color: #2b2b2b;
+                        font-size: 1.8rem;
+                    } 
+                }
+                
+            }
+            &.active{
+                display: block;
+                opacity: 1;
+                transition: .5s ease;
+            }
+        }
+        
+    }
+
+    // @include mediaQuery($break-lg){ 
+    //     &__wrapper{
+    //         width: 40%;
+    //         height: 31rem;
+    //         margin: 0 auto;
+    //         padding-top: 4.8rem;
+    //         display: flex;
+    //     } 
+    //     .discover__nav{
+    //         max-width: 50rem;
+    //         margin: auto;
+    //         h3{
+    //             font-size: 2.8rem;
+    //             padding-bottom: 4.8rem;
+    //         }
+    //         ul{
+    //             li{
+    //                 span{
+    //                 font-size: 2.4rem;
+    //                 }
+    //             }
+    //         }
+            
+    //     }
+
+    //     &__tab{ 
+    //         padding-bottom: 0;
+    //         text-align: center;
+    //         min-height: 30rem;
+    //         // position: relative;         //add
+    //         // //min-height: 50vh;           //add
+    //         // display: flex;              //add   
+    //         justify-content: center; 
+    //         &__content{
+    //             align-items: center;
+    //             justify-content: center;
+    //             // display: flex;
+    //             // position: absolute;
+    //             opacity: 0;
+    //             // display: none;
+    //             img{
+    //                 width: 50rem;
+    //                 padding: 0;
+    //             };
+    //             &__text{
+    //                 max-width: 30rem;
+    //                 padding: 0;
+    //                 text-align: left;
+    //                 h2{
+    //                     font-size: 2.4rem;
+    //                 }
+    //                 p{
+    //                     font-size: 1.6rem;
+    //                     padding: 0;
+    //                 }
+    //             }
+    //         }
+    //         &__content.active{
+    //             display: flex;
+    //             opacity: 1;
+    //             transition: .5s ease;
+    //         }
+    //     }
+        
+    // }   
+}
+
+
+
+
+
+
