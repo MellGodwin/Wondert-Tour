@@ -18,8 +18,9 @@
         color: $clr-primary;
         border-color: $clr-primary;
         &:hover{
-            background-color: $clr-primary;
-            color: $clr-light
+            // background-color: $clr-primary;
+            color: $clr-light;
+            border-color: unset;
         }
 
     }
