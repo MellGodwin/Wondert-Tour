@@ -1,6 +1,6 @@
 .btn {
     background: $clr-primary;
-    border-radius: 3rem;
+    // border-radius: 3rem;
     padding: .8rem 1.8rem;
     border: 1px solid;
     display: inline-block;
@@ -13,7 +13,7 @@
             background-color: darken($clr-primary, 10);
         }
     }
-    &--outline{
+    &--outline2{
         background-color: transparent;
         color: $clr-primary;
         border-color: $clr-primary;
@@ -24,6 +24,33 @@
         }
 
     }
+    &--trans{
+        color: $clr-light;
+        font-size: 1.6rem;
+        font-weight: 500;
+        border: 2px solid;
+        &:hover{
+            background-color: $clr-light;
+            color: $clr-dark;
+            transition: .5s ease;
+        }
+    }
+    &--outline{
+        background-color: transparent;
+        color: $clr-dark;
+        border-color: $clr-dark;
+        font-size: 1.6rem;
+        font-weight: 500;
+        border: 2px solid;
+        &:hover{
+            background-color: #50ba87;
+            color: $clr-dark;
+            //border-color: $clr-primary;
+            transition: .5s ease;
+        }
+
+    }
+
     &--dark{
         background-color: $clr-dark;
         color: $clr-light;

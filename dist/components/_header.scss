@@ -4,6 +4,7 @@
         background-color: #50ba87;
     }
     &__wrapper{
+        
         display: flex;
         //justify-content: space-between;
         padding: 1rem;
@@ -23,6 +24,7 @@
                 display: none;
             }
             &.open{
+                
                 span{
                     display: none;
                     transition: .5s ease;
@@ -38,22 +40,42 @@
             }
         }
         .toggle__dots{
-            margin-left: 20rem;
-            padding: .9rem 1rem;
+            padding: 1.6rem;
+            position: absolute;
+            cursor: pointer;
+            top: 0rem;
+            right: .5rem;
             span{
-                width: .5rem;
-                height: .5rem;
+                width: .6rem;
+                height: .6rem;
                 background-color: $clr-dark;
                 display: block;
-                border-radius: 2rem;
+                margin-bottom: .4rem;
+                border-radius: 50%;
+                transition: .5s ease;
+                &:last-child{
+                    margin-bottom: 0;
+                }
             }
-            &.open{
-                //background-color: $clr-primary;
-                border-radius: 1rem;
+            &.open span:first-child{
+                transform: translate(0, 14px);
+                transition: .5s ease;
+                width: .4rem;
+                height: .4rem;
             }
-            span:nth-child(2){
-                margin: .5rem 0;
+            &.open span:nth-child(2){
+                margin-bottom: unset;
+                transition: .5s ease;
+                width: .4rem;
+                height: .4rem;
             }
+            &.open span:last-child{
+                transform: translate(0, -10px);
+                transition: .5s ease;
+                width: .4rem;
+                height: .4rem;   
+            }
+
         }
 
     }
@@ -181,18 +203,17 @@
         position: absolute;
         background-color: $clr-light;
         right: 0;
-        top: 6.25rem;
         width: 50%;
-        display: none;
+        top: 10.25rem;
+        visibility: hidden;
         height: auto;
         z-index: 999;
         padding: 2rem 0;
         &.open{
-            display: block;
+            visibility: visible;
+            top: 6.25rem;
             transform-origin: bottom 20px;
-            transition: .5s ease;
-
-        
+            transition: .5s ease-in-out;
         }
         
         ul{
@@ -233,7 +254,6 @@
                 position: relative;
                 cursor: pointer;
                 
-
                 &:after {
                   content: "";
                   position: absolute;
@@ -244,6 +264,7 @@
                   z-index: -1;
                   background: transparent;
                   background: #50ba87;
+                  
                   transform: scaleX(0);
                   transform-origin: bottom center;
                   transition: transform 0.25s ease-out;
@@ -349,7 +370,10 @@
                     position: relative;
                     cursor: pointer;
                     background-color: unset;
-                    
+                    &:hover{
+                        color: $clr-light;
+                    }
+    
     
                     &:after {
                       content: "";
@@ -377,4 +401,166 @@
     }
         
         
+}
+
+.headerD{
+    .tns-outer{
+        position: relative;
+        button{
+            display: none;
+        }
+    }
+
+    .tns-controls{
+        position: absolute;
+        top: 45%;
+        width: 100%;
+        z-index: 99;
+        right: 0;
+        button {
+            background-color: transparent;
+            color: #ffffff;
+            border: none;
+            font-size: 2rem;
+            display: block;
+            &:hover{
+                background-color: transparent;
+                
+            }
+        }
+    }
+
+    background-color: #162e44;
+    
+    &__navD{
+        display: none;
+    }
+    @include mediaQuery($break-lg){
+        
+        &__wrapper{
+            display: flex;
+            padding: 1rem;
+            
+        }
+        &__navD{
+            display: flex;
+            
+            //position: absolute;
+            width: 100%;
+            max-width: 120rem;
+            margin: auto;
+            justify-content: space-between;
+            align-items: center;
+            //margin-left: 37rem;
+            &__items{
+                display: flex;
+                
+                .itemD{
+                    display: flex;
+                    padding: 1.5rem 2rem; 
+                    position: relative;
+                    
+                    
+                    &:first-child{
+                        background-color: #faf7f750;
+                        border-top: 3px solid #36c3b9;
+                    }
+                    ul{
+                        position: absolute;
+                        background-color: $clr-light;
+                        z-index: 999;
+                        width: 30rem;
+                        visibility: hidden;
+                        top: 5.8rem;
+                        padding: 2rem 2.5rem;
+                        margin-left: -2rem;
+                        &:not(:first-child), &:not(:last-child){
+                            margin: 0 .5rem;
+                        }
+                        
+                        a{
+                            font-size: 1.8rem;
+                            
+                            color: #504f4f;
+                            gap: 2rem;
+                            line-height: 3rem;
+                            &:hover{
+                                border-left: 2px solid #50ba87;
+                                padding-left: 1rem;
+                            }
+                            
+                        }
+                        &#pages{
+                            display: grid;
+                            grid-template-columns: 2fr 2fr 1.5fr;
+                            grid-gap: 3rem;
+                            width: 120rem;
+                            left: -61rem;
+                            .attrilead{
+                                h5{
+                                    font-size: 2.5rem;
+                                    color: #504f4f;
+                                    padding-bottom: 2rem;
+                                }
+                            }
+                            .attricontent{
+                                display: grid;
+                                grid-template-columns: 1fr 1fr ;
+                                grid-gap: 3rem;
+                                
+                            }
+                            .gallery1{
+                                display: inline-flex;
+                                img{
+                                    padding: 1rem;
+                                    
+                                }
+                            }
+                        
+                        }
+
+                        
+                    }
+                    &:hover{
+                        background-color: #faf7f750;
+                        border-top: 3px solid #36c3b9;
+                        ul{
+                            visibility: visible;
+                        }
+                    }
+                    
+                
+                    .itemD__top{
+                        
+                        a{
+                            font-size: 2rem;
+                            font-weight: 600;
+                            cursor: pointer ;
+                            color: $clr-light;  
+                             
+                        }
+                    }
+                    
+                }
+            }
+            &__icon{
+                ul{
+                    display: flex;
+                    gap: 2rem;
+                    i{
+                        font-size: 2rem;
+                        font-weight: 600;
+                        color: $clr-light;
+                        padding: 1rem .3rem; 
+                        &:hover{
+                            color: #50ba87;
+                        }
+
+                    }    
+                }
+            }
+            
+        }
+    }
+
 }
