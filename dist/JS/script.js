@@ -23,28 +23,75 @@ toggleDotsDev.addEventListener("click", () => {
   headerDots.style=("transition:.5s ease");
 });
 
-const discoverNav=document.querySelectorAll(".discover__nav__link");
-const starContent=document.querySelectorAll(".discover__tab__content");
-discoverNav.forEach((star) => {
-    star.addEventListener("click", () => {
-        removeActiveStar();
-        star.classList.add("active");
-        const activeContent= document.querySelector(`#${star.id}-content`);
-        removeActiveContent();
-        activeContent.classList.add("active");
-    })
+const isa =document.querySelector("#isa");
+const dalwa =document.querySelector("#dalwa");
+const tatlo =document.querySelector("#tatlo");
+const tex =document.querySelectorAll(".tex");
+const gg =document.querySelectorAll(".nav_acc a");
+
+
+const isa_content =document.querySelector("#isa_content");
+const dalwa_content =document.querySelector("#dalwa_content");
+const tatlo_content =document.querySelector("#tatlo_content");
+
+isa.addEventListener("click",()=>{
+  clearActive();
+  isa_content.classList.toggle("active")
+  isa.classList.toggle("active")
+  
+})
+dalwa.addEventListener("click",()=>{
+  clearActive();
+  dalwa_content.classList.toggle("active")
+  dalwa.classList.toggle("active")
+  
+})
+tatlo.addEventListener("click",()=>{
+  clearActive();
+  tatlo_content.classList.toggle("active")
+  tatlo.classList.toggle("active")
+  
 })
 
+const clearActive = ()=>{
+  tex.forEach((item)=>{
+    item.classList.remove("active")
+  })
+  gg.forEach((item)=>{
+    item.classList.remove("active")
+  })
+}
+
+
 function removeActiveStar(){
-  discoverNav.forEach((star) =>{
-      star.classList.remove("active");
+  hoverNav.forEach((hover) =>{
+      hover.classList.remove("active");
   })
 }
-function removeActiveContent(){
-  starContent.forEach((star) =>{
-      star.classList.remove("active");
-  })
-}
+
+
+// const discoverNav=document.querySelectorAll(".discover__nav__link");
+// const starContent=document.querySelectorAll(".discover__tab__content");
+// discoverNav.forEach((star) => {
+//     star.addEventListener("click", () => {
+//         removeActiveStar();
+//         star.classList.add("active");
+//         const activeContent= document.querySelector(`#${star.id}-content`);
+//         removeActiveContent();
+//         activeContent.classList.add("active");
+//     })
+// })
+
+// function removeActiveStar(){
+//   discoverNav.forEach((star) =>{
+//       star.classList.remove("active");
+//   })
+// }
+// function removeActiveContent(){
+//   starContent.forEach((star) =>{
+//       star.classList.remove("active");
+//   })
+// }
 
 
 

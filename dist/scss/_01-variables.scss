@@ -1,23 +1,23 @@
-$clr-primary:#0066b8;
-$clr-dark:#2b2b2b;
-$clr-light:#ffffff;
-$clr-lighten: #F5F5F5;
-$clr-lightblue: #01B3A7;
-
-$break-sm:500px;
-$break-md:768px;
-$break-lg:970px;
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;800&display=swap');
 
+$clr-primary: #01b3a7;
+$clr-textprimary: #afacac;
+$clr-textsecondary: #000000AB;
+$clr-bgprimary: #56fff4;
+$clr-bgsecondary: #162e44;
+$clr-light: #ffffff;
+$clr-dark: #2d2d2d;
 $clr-gray: #eaeaea;
-
-
+$clr-fadedgray: #f5f5f5;
+$clr-navyblue: #11263a;
+$clr-medblue: #162e44;
+$clr-gg: #cfd1d1;
+$clr-darkenblue: #11263a;
+$clr-bgLgreen: #50ba87;
+$clr-bgLpink: #faf6ee;
 
 $ff-primary: "Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
-$ff-secondary: "Helvetica Neue",Helvetica,Arial,sans-serif;
-
-$shadow: 5px 5px 15px 2px rgba(0,0,0,0.06);
+$ff-secondary: "Segoe UI","Helvetica Neue","Helvetica",Arial,sans-serif;
 
 $breakpoints: (
   "xs": 0,
@@ -27,11 +27,12 @@ $breakpoints: (
   "xl": 120rem,
 );
 
-$mobile: 480px;
-$tablet: 72rem;
-$desktop: 96rem;
 
+$break-sm:50px;
+$break-md:760px;
+$break-lg:1020px;
 
 $grid-cols: 12;
 $grid-gap: 1rem;
 
+$shadow: 5px 5px 15px 2px rgba(0,0,0,0.06);

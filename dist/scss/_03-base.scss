@@ -1,13 +1,36 @@
 html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-    scroll-padding-top: 10rem;
-  }
-  
-  body {
-    font-size: 1.6rem;
-    font-family: $ff-primary;
-    line-height: 1.4;
-    position: relative;
-    
-  }
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  font-family: $ff-primary;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: $clr-dark;
+  transition: .5s ease;
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body.show {
+  transform: translate(-350px);
+}
+
+a {
+  color: $clr-dark;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: bold;
+  span{
+    color: $clr-primary;
+}
+}

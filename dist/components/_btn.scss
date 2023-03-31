@@ -9,21 +9,12 @@
         background-color: $clr-primary;
         color: $clr-light;
         border-color: $clr-primary;
+        
         &:hover{
             background-color: darken($clr-primary, 10);
         }
     }
-    &--outline2{
-        background-color: transparent;
-        color: $clr-primary;
-        border-color: $clr-primary;
-        &:hover{
-            // background-color: $clr-primary;
-            color: $clr-light;
-            border-color: unset;
-        }
 
-    }
     &--trans{
         color: $clr-light;
         font-size: 1.6rem;
@@ -43,14 +34,13 @@
         font-weight: 500;
         border: 2px solid;
         &:hover{
-            background-color: #50ba87;
+            background-color: $clr-primary;
             color: $clr-dark;
-            //border-color: $clr-primary;
+            border-color: $clr-primary;
             transition: .5s ease;
         }
 
     }
-
     &--dark{
         background-color: $clr-dark;
         color: $clr-light;
